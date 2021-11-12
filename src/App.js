@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import TodoInput from "./components/TodoInput/TodoInput";
+import TodoList from "./components/TodoList/TodoList";
+import EmptyList from "./components/EmptyList/EmptyList";
+import styled from "styled-components";
+
 import './App.css';
 
+const Main = styled.main`
+    min-width: 60%;
+    text-align: center;
+    margin: 2rem 5rem;
+`
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    const [taskList, setTaskList] = useState([]);
+
+    const addTaskHandler = task => {
+        setTaskList(prevList => {
+            const updatedList = [...prevList];
+            updatedList.unshift(task);
+            return updatedList;
+        });
+    };
+
+    const deleteTaskHandler = taskId => {
+        console.log(taskId);
+        const updatedList = taskList.filter(listItem => listItem.id !== taskId);
+
+        setTaskList(updatedList);
+    };
+
+    return (
+        <Main title="To-do List App">
+            <TodoInput onTaskSubmition={addTaskHandler} />
+            {taskList.length <= 0 && <EmptyList />}
+            {taskList.length > 0 && <TodoList onClickedListItem={deleteTaskHandler} items={taskList} />}
+        </Main>
+    )
+};
 
 export default App;
