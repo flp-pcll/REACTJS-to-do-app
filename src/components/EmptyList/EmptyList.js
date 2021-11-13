@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import EmptyListIllustration from '../../assets/icons/undraw_contemplating_re_ynec.svg';
+import Card from "../UI/Card";
+import {ReactComponent as Illustration} from '../../assets/icons/undraw_contemplating_re_ynec.svg';
 
 const EmptyListArea = styled.div`
     width: 100%;
@@ -9,8 +10,6 @@ const EmptyListArea = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: .5rem 0 0 0;
-    border-radius: 10px;
     color: #cfcfcf;
 
     & h2 {
@@ -24,20 +23,24 @@ const EmptyListArea = styled.div`
     }
 `
 
-const EmptyIllustration = styled.img`
+const EmptyIllustration = styled.div`
     width: 100%;
     height: 150px;
     margin: .5rem 0 .5rem 0;
-    opacity: .8;
+    opacity: 1;
 `
 
 function EmptyList() {
     return(
-        <EmptyListArea>
-            <h2>Nothing here...</h2>
-            <EmptyIllustration src={EmptyListIllustration} alt="a girl listening to music"/>
-            <p>Add new tasks to your list using the input above.</p>
-        </EmptyListArea>
+        <Card container={true} style={{marginTop: '.8rem'}}>
+            <EmptyListArea>
+                <h2>Nothing here...</h2>
+                <EmptyIllustration>
+                    <Illustration style={{width: '100%', height: '100%'}} title="No tasks left. Relax Yourself"/>
+                </EmptyIllustration>
+                <p>Add new tasks to your list using the input above.</p>
+            </EmptyListArea>
+        </Card>
     )
 };
 

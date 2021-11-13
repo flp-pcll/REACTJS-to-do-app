@@ -1,31 +1,33 @@
 import React, { useState } from "react";
+import Card from "../UI/Card";
 import Button from "../UI/Button";
 import styled from 'styled-components';
 
 const Form = styled.form`
 background-color: rgba(47, 47, 47, .5);
-border-radius: 10px;
     font-size: 1.4rem;
-    padding: 1.4rem;
+    padding: 1.4rem 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
 `
 
 const FormControls = styled.div`
 & label {
-    display: block;
+    vertical-align: super;
+    text-align: left;
     color: ${props => props.invalid && '#d32f2f'};
     color: ${props => !props.invalid && '#cfcfcf'};
-    margin-top: .5rem;
     font-size: 1.2rem;
 }
 & input {
-    width: 60%;
+    width: 100%;
     font-family: inherit;
-    margin-top: .5rem;
     font-weight: 400;
     color: #3e3e3e;
     font-size: 1.2rem;
-    padding: .5rem;
-    text-align: center;
+    padding: .4rem;
+    text-align: left;
     border-radius: 5px;
     outline: ${props => props.invalid && '2px solid #d32f2f'}
 }
@@ -58,15 +60,15 @@ function TodoInput(props) {
     };
 
     return (
-        <Form action="/" className="todo__insert-task" onSubmit={formSubmitionHandler} autoComplete="off" noValidate>
-            <FormControls invalid={!isInputValid} className="form-controls">
-                <label aria-hidden="true">Insert a new task to your to-do list</label>
-                <input id="insertTask" onChange={inputChangeHandler} onClick={clickHandler} type="text" name="Insert a new task" aria-label="New Task" />
-            </FormControls>
-            <div role="complementary" className="form-actions">
-                <Button onClick={e => console.log('clicked')} tabIndex="0">Add Task</Button>
-            </div>
-        </Form>
+        <Card className="card" container={true}>
+            <Form action="/" onSubmit={formSubmitionHandler} autoComplete="off" noValidate>
+                <FormControls invalid={!isInputValid} className="form-controls">
+                    <label>Insert a new task to your to-do list:</label>
+                    <input id="insertTask" onChange={inputChangeHandler} onClick={clickHandler} type="text" name="Insert a new task" aria-label="New Task" />
+                </FormControls>
+                <Button type="submit" onClick={e => console.log('clicked')} tabIndex="0">Add Task</Button>
+            </Form>
+        </Card>
     )
 };
 

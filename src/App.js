@@ -6,10 +6,11 @@ import styled from "styled-components";
 
 import './App.css';
 
-const Main = styled.main`
-    min-width: 60%;
-    text-align: center;
+const TodoApp = styled.main`
+    font-family: inherit;
+    width: 50%;
     margin: 2rem 5rem;
+    text-align: center;
 `
 
 function App() {
@@ -31,11 +32,11 @@ function App() {
     };
 
     return (
-        <Main title="To-do List App">
+        <TodoApp title="To-do List App">
             <TodoInput onTaskSubmition={addTaskHandler} />
             {taskList.length <= 0 && <EmptyList />}
             {taskList.length > 0 && <TodoList onClickedListItem={deleteTaskHandler} items={taskList} />}
-        </Main>
+        </TodoApp>
     )
 };
 

@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-    border-radius: ${props => props.listItem ? '100px' : '200px'};
-    border: 1px solid transparent;
-    z-index: 10000;
+    ${props => props.container && 'border-radius: 10px; box-shadow: 0 .1rem .2rem .1rem rgba(25, 25, 25, .5)'};
+    ${props => !props.container && 'margin: 1rem; border-radius: 5px; box-shadow: .5px .5px .1rem .09rem rgba(10, 10,10, .1) '};
     overflow: hidden;
-    margin: ${props => props.listItem ? '1rem' : '0'};
 `
-
 export default Card;
+

@@ -2,22 +2,29 @@ import styled from "styled-components";
 import '../../reset.css';
 
 const Button = styled.button`
-    margin: .5rem 0 0 0;
     box-sizing: border-box;
-    width: 30%;
     outline: none;
-    border: 2px solid #cfcfcf;
-    border-radius: 2px;
-    padding: .5rem;
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    border: 2px solid #e2bbde;
+    border-radius: 5px;
+    padding: .5rem .8rem;
+    margin: 1rem 0 0 .5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
     background-color: transparent;
     cursor: pointer;
-    color: #cfcfcf;
-    font-weight: 700;
+    color: #e2bbde;
+    font-weight: 500;
     transition: all .1s ease-in;
+    align-self: flex-end;
+    white-space: nowrap;
 
-    &:hover {background-color: #cfcfcf; color: #2e2e2e; transition: all .05s ease-in};
+
+    @media only screen and (hover: hover) {
+        &:hover {
+            background-color: #e2bbde; color: #2e2e2e; 
+            transition: all .05s ease-in;
+        }
+    }
 
 `
 export default Button;
