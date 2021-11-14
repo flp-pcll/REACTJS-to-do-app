@@ -6,6 +6,7 @@ body {
     background-color: #1c1c1c;
     color: #fff;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased !important;
 }
 
 #root {

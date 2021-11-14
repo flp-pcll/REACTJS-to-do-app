@@ -11,6 +11,15 @@ const TodoApp = styled.main`
     width: 50%;
     margin: 2rem 5rem;
     text-align: center;
+
+    @media screen and (max-width: 915px) {
+            margin: 2rem 5rem;
+            width: 70%;
+    }
+    @media screen and (max-width: 658px) {
+        margin: 1rem 2rem;
+        width: 100%;
+    }
 `
 
 function App() {

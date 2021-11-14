@@ -10,6 +10,11 @@ background-color: rgba(47, 47, 47, .5);
     text-align: left;
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        text-align: center;
+    }
 `
 
 const FormControls = styled.div`
@@ -18,7 +23,7 @@ const FormControls = styled.div`
     text-align: left;
     color: ${props => props.invalid && '#d32f2f'};
     color: ${props => !props.invalid && '#cfcfcf'};
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 & input {
     width: 100%;
@@ -35,6 +40,12 @@ const FormControls = styled.div`
     color: #5e5e5e;
     font-family: inherit;
     font-weight: 300;
+}
+
+@media screen and (max-width: 980px) {
+        & label {
+            font-size: 1rem;
+        }
 }
 `
 

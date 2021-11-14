@@ -21,6 +21,12 @@ const EmptyListArea = styled.div`
         font-weight: 300;
         font-size: 1rem;
     }
+
+    @media screen and (max-width: 550px) {
+        & p {
+            margin: 0 3rem;
+        }
+    }
 `
 
 const EmptyIllustration = styled.div`
