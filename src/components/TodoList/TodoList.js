@@ -6,7 +6,7 @@ import Card from "../UI/Card";
 const TodoListArea = styled.div`
     width: 100%;
     background-color: rgba(47, 47, 47, .5);
-    min-height: 50vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,6 @@ const TodoListArea = styled.div`
 
     & ul {
         width: 100%;
-        margin: 1rem;
     }
 `
 

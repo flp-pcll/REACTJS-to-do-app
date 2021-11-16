@@ -10,16 +10,18 @@ background-color: rgba(47, 47, 47, .5);
     text-align: left;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    align-content: center;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
         flex-direction: column;
         text-align: center;
+        padding: 1.4rem 1rem;
     }
 `
 
 const FormControls = styled.div`
 & label {
-    vertical-align: super;
     text-align: left;
     color: ${props => props.invalid && '#d32f2f'};
     color: ${props => !props.invalid && '#cfcfcf'};
@@ -34,7 +36,10 @@ const FormControls = styled.div`
     padding: .4rem;
     text-align: left;
     border-radius: 5px;
-    outline: ${props => props.invalid && '2px solid #d32f2f'}
+    box-shadow: .5px .5px .1rem .04rem rgba(10, 10, 10, .4); 
+    border: ${props => props.invalid && '2px solid #d32f2f'};
+    border: ${props => !props.invalid && '2px solid transparent'};
+
 }
 & input::placeholder {
     color: #5e5e5e;
@@ -74,10 +79,10 @@ function TodoInput(props) {
         <Card className="card" container={true}>
             <Form action="/" onSubmit={formSubmitionHandler} autoComplete="off" noValidate>
                 <FormControls invalid={!isInputValid} className="form-controls">
-                    <label>Insert a new task to your to-do list:</label>
+                    <label style={{verticalAlign: 'top'}}>Insert a new task to your to-do list:</label>
                     <input id="insertTask" onChange={inputChangeHandler} onClick={clickHandler} type="text" name="Insert a new task" aria-label="New Task" />
                 </FormControls>
-                <Button type="submit" onClick={e => console.log('clicked')} tabIndex="0">Add Task</Button>
+                <Button className="button" type="submit" onClick={e => console.log('clicked')} tabIndex="0">Add Task</Button>
             </Form>
         </Card>
     )

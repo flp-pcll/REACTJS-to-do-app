@@ -5,7 +5,7 @@ import {ReactComponent as Illustration} from '../../assets/icons/undraw_contempl
 
 const EmptyListArea = styled.div`
     width: 100%;
-    min-height: 50vh;
+    min-height: 65vh;
     background-color: rgba(47, 47, 47, .5);
     display: flex;
     flex-direction: column;

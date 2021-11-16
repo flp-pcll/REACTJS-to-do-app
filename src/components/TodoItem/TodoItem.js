@@ -5,10 +5,10 @@ import Card from "../UI/Card";
 const ListItem = styled.li`
     display: block;
     max-width: 100%;
-    padding: .25rem;
+    padding: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 5px;
     background-color: rgba(60, 60, 60, 1);
     transition: .1s background-color ease-out;

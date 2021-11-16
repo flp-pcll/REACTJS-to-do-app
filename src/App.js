@@ -17,7 +17,7 @@ const TodoApp = styled.main`
             width: 70%;
     }
     @media screen and (max-width: 658px) {
-        margin: 1rem 2rem;
+        margin: 1rem 1rem;
         width: 100%;
     }
 `
