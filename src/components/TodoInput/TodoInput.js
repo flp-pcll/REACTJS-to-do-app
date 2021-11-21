@@ -59,7 +59,7 @@ function TodoInput(props) {
     const [isInputValid, setIsInputValid] = useState(true);
 
     const inputChangeHandler = event => {
-        setNewTask({ title: event.target.value, id: Math.floor(Math.random() * 1582) });
+        setNewTask({ title: event.target.value, id:(Math.random()* 0xFFFFFF << 0).toString(16).padStart(6, '0')});
     };
 
     const clickHandler = event => {
