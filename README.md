@@ -15,7 +15,7 @@ This is a simple to-do list application built with React.
 - Desktop Version:
 ![](desktop.png)
 
-- Mobile Version: 
+- Mobile Version: <br>
 ![](mobile.png)
 
 
