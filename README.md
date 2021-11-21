@@ -1,5 +1,5 @@
 # To-do App
-This is a simple to-do list application built with React.
+This is a simple to-do list application built with React. 
 
 ## Table of contents
 
@@ -12,9 +12,11 @@ This is a simple to-do list application built with React.
 ## Overview
 ### Screenshot
 
-![Desktop Version](desktop.png)
+- Desktop Version:
+![](desktop.png)
 
-![Mobile Version](mobile.png)
+- Mobile Version: 
+![](mobile.png)
 
 
 ### Built with
