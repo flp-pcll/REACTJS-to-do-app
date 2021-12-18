@@ -10,7 +10,14 @@ This is a simple to-do list application built with React.
 
 
 ## Overview
-### Screenshot
+
+To-Do App
+A simple to-do app in which the user can add tasks and click on the finished ones to remove them from the list.
+
+Build with React Hooks + styled components.
+
+You can check the app here: [TO-DO APP](https://flppcll-todo-app.netlify.app/)
+
 
 - Desktop Version:
 ![](desktop.png)
